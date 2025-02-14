@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Users</title>
+  {% load static %}
+  <link rel="stylesheet" href="% static 'style_admin.css' %">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+        <div class="logo"></div>
+        <nav class="menu">
+          <a href="Dashboard_admin.html"><button class="menu-btn">Dashboard</button></a>
+          <a href="managePro.html"><button class="menu-btn">Manage Properties</button></a>
+          <a href="manageUser.html"><button class="menu-btn">Manage User</button></a>
+          <a href="inquire.html"><button class="menu-btn">Inquiries</button></a>
+          <a href="review.html"><button class="menu-btn">Reviews</button></a>
+          <!-- <a href="buyer/index.html"><button class="menu-btn">Buyers</button></a>
+          <a href="seller/Dashboard.html"><button class="menu-btn">Sellers</button></a> -->
+        </nav>
+      </aside>
+    <main class="content">
+      <header class="header">
+        <h1>Manage Users</h1>
+        <button class="add-btn">Add New User</button>
+      </header>
+
+      <section class="users-list">
+        <div class="user-card">
+          <h2>User #001</h2>
+          <p><strong>Name:</strong>Om Patel</p>
+          <p><strong>Email:</strong> ompatel105@gmail.com</p>
+          <p><strong>Role:</strong> Buyer</p>
+          <button class="action-btn">Edit</button>
+          <button class="action-btn">Delete</button>
+        </div>
+        <div class="user-card">
+          <h2>User #002</h2>
+          <p><strong>Name:</strong>Aditya Sitapara</p>
+          <p><strong>Email:</strong>aditya505@gmail.com</p>
+          <p><strong>Role:</strong> Seller</p>
+          <button class="action-btn">Edit</button>
+          <button class="action-btn">Delete</button>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

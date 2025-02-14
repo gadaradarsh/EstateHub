@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reviews</title>
+  {% load static %}
+  <link rel="stylesheet" href="% static 'style_admin.css' %">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+        <div class="logo"></div>
+        <nav class="menu">
+          <a href="Dashboard_admin.html"><button class="menu-btn">Dashboard</button></a>
+          <a href="managePro.html"><button class="menu-btn">Manage Properties</button></a>
+          <a href="manageUser.html"><button class="menu-btn">Manage User</button></a>
+          <a href="inquire.html"><button class="menu-btn">Inquiries</button></a>
+          <a href="review.html"><button class="menu-btn">Reviews</button></a>
+          <!-- <a href="buyer/index.html"><button class="menu-btn">Buyers</button></a>
+          <a href="seller/Dashboard.html"><button class="menu-btn">Sellers</button></a> -->
+        </nav>
+      </aside>
+
+    <main class="content">
+      <header class="header">
+        <h1>Reviews</h1>
+        <input type="text" placeholder="Search reviews..." class="search-input">
+      </header>
+
+      <section class="reviews-list">
+        <div class="review-card">
+          <h2>Review #101</h2>
+          <p><strong>User:</strong>Om Patel</p>
+          <p><strong>Property:</strong> #456</p>
+          <p><strong>Rating:</strong> ⭐⭐⭐⭐⭐</p>
+          <p><strong>Comment:</strong> Amazing property and service!</p>
+          <button class="action-btn">Delete</button>
+        </div>
+        <div class="review-card">
+          <h2>Review #102</h2>
+          <p><strong>User:</strong>Aditya Sitapara</p>
+          <p><strong>Property:</strong> #789</p>
+          <p><strong>Rating:</strong> ⭐⭐⭐⭐</p>
+          <p><strong>Comment:</strong> Great location, but needs some improvements.</p>
+          <button class="action-btn">Delete</button>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

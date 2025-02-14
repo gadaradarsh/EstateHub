@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="logo"></div>
+      <nav class="menu">
+        <a href="index.html"><button>Home</button></a>
+        <a href="payment.html"><button>Payments</button></a>
+        <a href="category.html"><button>Category</button></a>
+        <a href="inquire.html"><button class="menu-btn">Inquiries</button></a>
+        <a href="favourite.html"><button>Favourite</button></a>
+        <a href="review.html"><button>Review</button></a>
+        <!-- <button class="seller-btn">Seller</button> -->
+      </nav>
+    </aside>
+      
+    <main class="content">
+      <header class="search-bar">
+        <h2>Payment Page</h2>
+      </header>
+      <section class="payment-form">
+        <form>
+          <div class="form-group">
+            <label for="name">Name on Card</label>
+            <input type="text" id="name" placeholder="Enter name on card" required>
+          </div>
+          <div class="form-group">
+            <label for="card-number">Card Number</label>
+            <input type="text" id="card-number" placeholder="Enter card number" required>
+          </div>
+          <div class="form-group-row">
+            <div class="form-group">
+              <label for="expiry">Expiration Date</label>
+              <input type="month" id="expiry" required>
+            </div>
+            <div class="form-group">
+              <label for="cvv">CVV</label>
+              <input type="text" id="cvv" placeholder="Enter CVV" maxlength="3" required>
+            </div>
+          </div>
+          <button type="submit" class="pay-btn">Pay Now</button>
+        </form>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

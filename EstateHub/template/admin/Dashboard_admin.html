@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="logo"></div>
+      <nav class="menu">
+        <a href="Dashboard_admin.html"><button class="menu-btn">Dashboard</button></a>
+        <a href="managePro.html"><button class="menu-btn">Manage Properties</button></a>
+        <a href="manageUser.html"><button class="menu-btn">Manage User</button></a>
+        <a href="inquire.html"><button class="menu-btn">Inquiries</button></a>
+        <a href="review.html"><button class="menu-btn">Reviews</button></a>
+        <!-- <a href="buyer/index.html"><button class="menu-btn">Buyers</button></a>
+        <a href="seller/Dashboard.html"><button class="menu-btn">Sellers</button></a> -->
+      </nav>
+    </aside>
+
+    <main class="content">
+      <header class="header">
+        <h1>Admin Dashboard</h1>
+        <input type="text" placeholder="Search..." class="search-input">
+      </header>
+
+      <section class="dashboard-cards">
+        <div class="dashboard-card">
+          <h2>Total Properties</h2>
+          <p>150</p>
+        </div>
+        <div class="dashboard-card">
+          <h2>Total Buyers</h2>
+          <p>200</p>
+        </div>
+        <div class="dashboard-card">
+          <h2>Total Sellers</h2>
+          <p>50</p>
+        </div>
+        <div class="dashboard-card">
+          <h2>Total Inquiries</h2>
+          <p>300</p>
+        </div>
+      </section>
+
+      <section class="recent-activity">
+        <h2>Recent Activity</h2>
+        <ul class="activity-list">
+          <li>Buyer Om Patel inquired about Property #123</li>
+          <li>Seller Aditya Sitapara added Property #456</li>
+          <li>Review added for Property #789</li>
+        </ul>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
