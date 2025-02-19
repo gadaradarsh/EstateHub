@@ -1,42 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    {% load bootstrap5 %}
-    {% bootstrap_css %}
-    {% bootstrap_javascript %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        h2 {
+            color: #333;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+            text-align: left;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .btn {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 10px;
+            margin-top: 15px;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background: #218838;
+        }
+        .login-link {
+            margin-top: 15px;
+        }
+        .login-link a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
-{% block content %}
-<div class="container py-5">
-    <center>
-    <h1>Register</h1>
-    <form method="POST">
-        {% csrf_token %}
-        <div class="form-group">
-            <label for="Name">Name</label><br>
-            <input type="text" id="name" name="name" required>
-        </div>
-        <div class="form-group">
-            <label for="number">Contact No. </label><br>
-            <input type="text" id="number" name="ContactNumber" required>
-        </div>
-        <div class="form-group">
-            <label for="email">Email</label><br>
-            <input type="email" id="email" name="Email" required>
-        </div>
-        <div class="form-group">
-            <label for="gender">Gender</label><br>
-            <label for="male">Male</label>
-            <input type="radio" id="male" name="gender" value="male" checked><br>
-            <label for="male">Female</label>
-            <input type="radio" id="female" name="gender" value="female" checked>
-        </div>
-        <div class="form-group">
-            <label for="password">Password</label><br>
+<body>
+
+    <div class="container">
+        <h2>Register</h2>
+        {% if messages %}
+            <div class="alert alert-primary" role="alert">
+                {% for message in messages %}
+                    {{ message }}
+                {% endfor %}
+            </div>
+        {% endif %}
+        
+        <form method="POST" action="{% url 'register_page' %}">
+            {% csrf_token %}
+            <label for="Fname">First Name:</label>
+            <input type="text" id="Fname" name="Fname" required>
+            
+            <label for="Lname">Last Name:</label>
+            <input type="text" id="Lname" name="Lname" required>
+            
+            <label for="Uname">User Name:</label>
+            <input type="text" id="Uname" name="Uname" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
+            
+            <button type="submit" class="btn">Register</button>
+        </form>
+
+        <div class="login-link">
+            <p>Already have an account? <a href="{% url 'login_page' %}">Login here</a></p>
         </div>
-        {{register_form.as_p}}
-        <button class="btn btn-primary" type="submit">Register</button>
-    </form>
-</center>
-    <p class="text-center">If you already have an account, <a
-href="/loginPage.html">login</a> instead.</p>
-</div>
-{% endblock %}
+    </div>
+
+</body>
+</html>

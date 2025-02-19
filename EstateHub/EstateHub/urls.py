@@ -16,6 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include,path
+from hub.views import login_page,logout_page,register_page
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,6 +26,7 @@ urlpatterns = [
     path('admin/manageUser.html',include('hub.urls')),
     path('admin/review.html',include('hub.urls')),
     path('admin/inquire.html',include('hub.urls')),
-    path('register.html',include('hub.urls')),
-    path('loginPage.html',include('hub.urls'),)
+    path('login/',login_page, name='login_page'),
+    path('logout/',logout_page, name='logout_page'),
+    path('register/',register_page, name='register_page'),
 ]
