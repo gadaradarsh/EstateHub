@@ -12,11 +12,11 @@
     <aside class="sidebar">
         <div class="logo"></div>
         <nav class="menu">
-          <a href="Dashboard_admin.html"><button class="menu-btn">Dashboard</button></a>
-          <a href="managePro.html"><button class="menu-btn">Manage Properties</button></a>
-          <a href="manageUser.html"><button class="menu-btn">Manage User</button></a>
-          <a href="inquire.html"><button class="menu-btn">Inquiries</button></a>
-          <a href="review.html"><button class="menu-btn">Reviews</button></a>
+          <a href="{% url 'Dashboard_admin' %}"><button class="menu-btn">Dashboard</button></a>
+          <a href="{% url 'managePro' %}"><button class="menu-btn">Manage Properties</button></a>
+          <a href="{% url 'user_admin' %}"><button class="menu-btn">Manage User</button></a>
+          <a href="{% url 'inquire' %}"><button class="menu-btn">Inquiries</button></a>
+          <a href="{% url 'review' %}"><button class="menu-btn">Reviews</button></a>
           <!-- <a href="buyer/index.html"><button class="menu-btn">Buyers</button></a>
           <a href="seller/Dashboard.html"><button class="menu-btn">Sellers</button></a> -->
         </nav>
