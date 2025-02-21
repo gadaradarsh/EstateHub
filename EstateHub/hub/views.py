@@ -8,6 +8,7 @@ from django.contrib.auth.decorators import login_required
 
 # Views for rendering pages
 #admin
+@login_required(login_url='login_page')
 def home(request):
     return render(request,'admin/Dashboard_admin.html')
 def properties(request):
